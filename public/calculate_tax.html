@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTO - Calculate Tax</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .option-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #4b0082; 
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .option-button:hover {
+            background-color: #6a0dad; 
+        }
+        .icons {
+            margin-top: 20px;
+        }
+        .icons img {
+            width: 110px; 
+            height: auto;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        dialog#logoutDialog {
+            background-color: rgba(177, 156, 217, 0.9);
+            border: 2px solid #4b0082;
+            padding: 20px;
+            border-radius: 8px;
+            color: #ffffff;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10; 
+        }
+        dialog#logoutDialog button {
+            background-color: #4b0082;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+        }
+        dialog#logoutDialog button:hover {
+            background-color: #6a0dad;
+        }
+        dialog#logoutDialog button#cancelLogout {
+            background-color: #b19cd9;
+        }
+        dialog#logoutDialog button#cancelLogout:hover {
+            background-color: #d3b2e5;
+        }
+        
+        footer {
+            background-color: rgba(177, 156, 217, 0.9);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="calculate-tax-selection">
+    <header>
+<img src="logo-investo.jpeg" alt="Investo Logo" class="logo" />
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="calculate_tax.html">Calculate Tax</a></li>
+                       
+                <li><a href="library.html">Library</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Select Tax Regime</h1>
+            <a href="oldregime.html" class="option-button">Old Regime</a>
+            <div class="icons">
+                <img src="oldregime.jpg" alt="oldregime">
+                
+            </div>
+            <a href="newregime.html" class="option-button">New Regime</a>
+            <div class="icons">
+                <img src="newregime.jpg" alt="newregime">
+                
+            </div>
+        </div>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 INVESTO. All rights reserved.</p>
+    </footer>
+    
+    
+    <dialog id="logoutDialog">
+        <p>Do you really want to logout?</p>
+        <button id="confirmLogout">Yes, Logout</button>
+        <button id="cancelLogout">Cancel</button>
+    </dialog>
+    
+    <script src="logout.js"></script> 
+</body>
+</html>

@@ -1,0 +1,277 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: #e6e6fa; 
+    color: #000000; 
+}
+
+
+header {
+    background-color: rgba(177, 156, 217, 0.9);
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+nav {
+    flex-grow: 1; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+    margin-left: 20px; 
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    background: #e6e6fa;
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.intro {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #000000;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    background: none;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #4b0082;
+}
+
+.intro p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+
+footer {
+    background-color: rgba(177, 156, 217, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+dialog#logoutDialog {
+    background-color: rgba(177, 156, 217, 0.9);
+    border: 2px solid #4b0082;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+}
+
+
+dialog#logoutDialog button {
+    background-color: #4b0082;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+dialog#logoutDialog button:hover {
+    background-color: #6a0dad;
+}
+
+dialog#logoutDialog button#cancelLogout {
+    background-color: #b19cd9;
+}
+
+dialog#logoutDialog button#cancelLogout:hover {
+    background-color: #d3b2e5;
+}
+
+
+body.blur-background main,
+body.blur-background header,
+body.blur-background footer {
+    filter: blur(5px); 
+    pointer-events: none; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+.investment-options {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investment-options h1 {
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.user-age {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.taxable-amount {
+margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+.investment-options .container {
+    margin-bottom: 20px;
+}
+
+.investment-options label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.investment-options input[type="range"] {
+    width: 100%;
+}
+
+.investment-options input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.investment-summary {
+    margin-top: 20px;
+}
+
+
+.investment-options input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 14px; 
+    height: 14px; 
+    border-radius: 50%; 
+    background: #4b0082;
+    cursor: pointer;
+}
+
+
+.investment-options input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px; 
+    border-radius: 5px; 
+    background: #e6e6fa; 
+}
+
+
+.investment-options input[type="range"]::-moz-range-thumb {
+    width: 14px; 
+    height: 14px; 
+    border-radius: 50%; 
+    background: #4b0082;
+    cursor: pointer; 
+}
+
+.investment-options input[type="range"]::-moz-range-track {
+    height: 10px; 
+    border-radius: 5px;
+    background: #e6e6fa; 
+}
+
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #6a0dad; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(177, 156, 217, 0.9);
+}
+

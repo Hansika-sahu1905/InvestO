@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTO - Investment Options</title>
+    <link rel="stylesheet" href="investment_options.css">
+</head>
+<body>
+    <header>
+<img src="logo-investo.jpeg" alt="Investo Logo" class="logo" />
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="calculate_tax.html">Calculate Tax</a></li>
+               
+                <li><a href="library.html">Library</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="investment-options">
+        <h1>Investment Options</h1>
+        <div class="user-age">
+            <p>Age: <span id="user-age"></span></p>
+        </div>
+        <div class="taxable-amount">
+            <p>Taxable Amount: <input type="text" id="taxable-amount" class="value" readonly></p>
+        </div>
+        <div id="investment-container">
+           
+        </div>
+        <div class="button-container">
+        <button onclick="location.href='calculate_tax.html'">Calculate Again</button>
+        <button onclick="location.href='index.html'">Homepage</button>
+    </div>
+
+    </section>
+</main>
+
+
+    <footer>
+        <p>&copy; 2024 INVESTO. All rights reserved.</p>
+    </footer>
+ <!-- Confirmation Dialog -->
+    <dialog id="logoutDialog">
+        <p>Do you really want to logout?</p>
+        <button id="confirmLogout">Yes, Logout</button>
+        <button id="cancelLogout">Cancel</button>
+    </dialog>
+
+    <script src="investment_options.js"></script>
+<script src="logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTO - Old Regime Tax Calculation</title>
+    <link rel="stylesheet" href="oldregime.css">
+</head>
+<body>
+    <header>
+<img src="logo-investo.jpeg" alt="Investo Logo" class="logo" />
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="calculate_tax.html">Calculate Tax</a></li>
+              
+                <li><a href="library.html">Library</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="tax-calculation">
+            <h1>New Regime Tax Calculation</h1>
+            <form id="taxForm">
+                <div class="main-container">
+                  
+                    <div class="small-container">
+                        <div class="container">
+                            <label for="annual_income">Annual Income (in lakhs):</label>
+                            <input type="number" id="annual_income" name="annual_income">
+                        </div>
+
+                  
+                        <div class="container">
+                            <label for="sd">SD (₹50,000):</label>
+                            <input type="text" id="sd" name="sd" readonly>
+                        </div>
+                    </div>
+
+                   
+
+                       
+                        <div class="container">
+                            <label for="final_income">Final Income:</label>
+                            <input type="text" id="final_income" name="final_income" readonly>
+                        </div>
+                    </div>
+
+                    
+                    <div class="small-container">
+                        <div class="container">
+                            <label for="tax_percentage">Tax Percentage:</label>
+                            <input type="text" id="tax_percentage" name="tax_percentage" readonly>
+                        </div>
+                        <div class="container">
+                            <label for="taxable_amount">Taxable Amount:</label>
+                            <input type="text" id="taxable_amount" name="taxable_amount" readonly>
+                        </div>
+                    </div>
+<button id="saveButton">Save</button>
+                    
+                </div>
+
+                <div class="container">
+                    <a id="investmentOptionsLink" href="investment_options2.html">View Investment Options</a>
+
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 INVESTO. All rights reserved.</p>
+    </footer>
+
+    
+    <dialog id="logoutDialog">
+        <p>Do you really want to logout?</p>
+        <button id="confirmLogout">Yes, Logout</button>
+        <button id="cancelLogout">Cancel</button>
+    </dialog>
+
+    
+    <script src="newregime.js"></script>
+<script src="logout.js"></script>
+</body>
+</html>

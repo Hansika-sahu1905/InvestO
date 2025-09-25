@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="login.css"> 
+    <script defer src="scripts.js"></script> 
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Create Account</h1>
+        <form id="create-account-form">
+            <div class="form-group">
+                <label for="username">Create Username: <span style="color: red;">*</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+           
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID: <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth: <span style="color: red;">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+           
+
+            <div class="form-group">
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span id="password-error" style="color: red; display: none;">Passwords do not match</span>
+                <span id="password-length-error" style="color: red; display: none;">Password must be 6 to 12 characters long</span>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
